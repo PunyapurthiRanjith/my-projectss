@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        margin-top: 200px;
+    }
+    #main {
+        height: 300px;
+        width: 500px;
+        background-color: rgb(107, 172, 177);
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px;
+    }
+
+    #time_section {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #hr,
+    #min,
+    #sec,
+    #mil_sec {
+        font-size: 65px;
+    }
+
+    #btn_section {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 30px;
+    }
+
+    #start {
+        width: 80px;
+        height: 40px;
+        background-color: rgb(170, 244, 33);
+        border: none;
+        border-radius: 12px;
+    }
+
+    #end {
+        width: 80px;
+        height: 40px;
+        background-color: rgb(253, 14, 6);
+        border: none;
+        border-radius: 12px;
+    }
+
+    #reset {
+        width: 120px;
+        height: 40px;
+        margin-top: 20px;
+        background-color: rgb(255, 182, 47);
+        border: none;
+        border-radius: 12px;
+    }
+    h2{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+</style>
+
+<body>
+    <div id="main">
+        <h2>JAVASCRIPT STOP WATCH</h2>
+        <div id="time_section">
+            <span id="hr">00</span>
+            <span>Hr</span>
+            <span id="min">00</span>
+            <span>Min</span>
+            <span id="sec">00</span>
+            <span>Sec</span>
+            <span id="mil_sec">00</span>
+        </div>
+        <div id="btn_section">
+            <button type="button" id="start">START</button>
+            <button type="button" id="end">STOP</button>
+        </div>
+        <button type="button" id="reset">RESET TIME</button>
+    </div>
+    <script>
+        let start = document.getElementById("start");
+        let end = document.getElementById("end");
+        let reset = document.getElementById("reset");
+
+        let hour = 0;
+        let minute = 0;
+        let second = 0;
+        let millisecond = 0;
+        let timing= false
+        start.addEventListener("click", function () {
+           if(!timing){
+            timing = true;
+            stopwatch();
+           }
+        });
+        end.addEventListener("click", function () {
+            timing = false;
+            clearInterval(interval)
+        });
+        reset.addEventListener("click", function () {
+            timing = false;
+            clearTimeout(interval)
+            hour = 0;
+            minute = 0;
+            second = 0;
+            millisecond = 0;
+            document.getElementById("hr").innerText = '00';
+            document.getElementById("min").innerText = '00';
+            document.getElementById("sec").innerText = '00';
+            document.getElementById("mil_sec").innerText = '00';
+        });
+        function stopwatch() {
+            if (timing) {
+                millisecond++;
+                if (millisecond == 100) {
+                    second++;
+                    millisecond = 0;
+                }
+                if (second == 60) {
+                    minute++;
+                    second = 0;
+                }
+                if (minute == 60) {
+                    hour++;
+                    minute = 0;
+                    second = 0;
+                }
+                let hour_time = hour;
+                let minute_time = minute;
+                let second_time = second;
+                let millisecond_time = millisecond;
+                document.getElementById("hr").innerText = hour_time.toString().padStart(2, "0");
+                document.getElementById("min").innerText = minute_time.toString().padStart(2, "0");
+                document.getElementById("sec").innerText = second_time.toString().padStart(2, "0");
+                document.getElementById("mil_sec").innerText = millisecond_time.toString().padStart(3, "0");
+                interval=setTimeout(stopwatch, 10);
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <style>
+        .bg-nav {
+            padding: 20px;
+            background-color: rgb(7, 80, 125);
+        }
+
+        .navbar-toggler-icon {
+            background-color: rgb(244, 251, 255);
+            border-radius: 10px;
+        }
+
+        .navbar-toggler-icon:hover {
+            background-color: rgb(226, 221, 221);
+        }
+
+        .home-banner {
+            background: url('https://tse2.mm.bing.net/th?id=OIP.64vdVCN6KYVutR1pmeC_PAHaEo&pid=Api&P=0&h=180') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .home-banner .content {
+            max-width: 600px;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .card:hover {
+            background-color: rgb(7, 80, 125);
+            color: aliceblue;
+            transform: scale(1.05, 1.05);
+        }
+
+        .p-4 img {
+            border-radius: 10px;
+        }
+
+        .p-4 img:hover {
+            transform: scale(1.1, 1.1);
+        }
+
+        .menu-img {
+            width: 90px;
+            border-radius: 5px;
+        }
+
+        .order-section,
+        .contact-section {
+            padding: 50px 0;
+        }
+
+        .flex-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .flex-item {
+            flex: 1;
+            min-width: 250px;
+            padding: 20px;
+            background: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        #btnHover:hover {
+            transform: scale(1.1, 1.1);
+        }
+
+        .footer-section {
+            background-color: rgb(7, 80, 125);
+            padding: 20px 0;
+            color: #fff;
+        }
+
+        h1::before {
+            content: ' \22EF';
+        }
+
+        h1::after {
+            content: ' \22EF';
+        }
+        h5{
+            color:rgb(127, 133, 25); 
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-nav">
+        <div class="container-fluid">
+            <a class="navbar-brand text-light" href="#"><img src="./logo.png" alt="" width="120px" height="50px"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon "></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ml-auto">
+                    <a class="nav-link active text-light" href="#home">Home</a>
+                    <a class="nav-link text-light" href="#menu-items">Menu-items</a>
+                    <a class="nav-link text-light" href="#our-services">Services</a>
+                    <a class="nav-link text-light" href="#menu-price">Pricing</a>
+                    <a class="nav-link text-light" href="#order">Orders</a>
+                    <a class="nav-link text-light" href="#discounts">Gifts&Offers</a>
+                    <a class="nav-link text-light" href="#about">About</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="home-banner">
+        <div class="content">
+            <h1>Welcome to Our Restaurant </h1>
+            <p>Experience exquisite flavors and a cozy ambiance</p>
+            <a href="#menu-items"><button  type="button" class="btn btn-light" aria-label="Explore Our Menu">Explore Menu</button>
+            </a></div>
+    </section>
+
+    <div class="container" id="menu-items">
+        <div class="text-center m-5">
+            <h1 style="color: rgb(7, 80, 125); font-family: 'pusifico',cursive;">
+                Menu Items
+            </h1>
+        </div>
+
+        <div class="d-flex flex-row flex-wrap mb-3 justify-content-evenly bgc">
+            <div class="p-4"><img src="https://tse3.mm.bing.net/th?id=OIP.LAKlyp7D03xGufDu_LE6mAHaE8&pid=Api&P=0&h=180"
+                    alt="" width="350px" height="250px"></div>
+            <div class="p-4"><img src="https://tse2.mm.bing.net/th?id=OIP.iPKB9-F7aJR3hEfop1oKXAHaE8&pid=Api&P=0&h=180"
+                    alt="" width="350px" height="250px"></div>
+            <div class="p-4"><img src="https://tse1.mm.bing.net/th?id=OIP.5_IjYa6H3cXJ1z5rjCnZVwHaEK&pid=Api&P=0&h=180"
+                    alt="" width="350px" height="250px"></div>
+            <div class="p-4"><img src="https://tse2.mm.bing.net/th?id=OIP.Lm47_NPdG_86CY3Bh8JHEgHaE7&pid=Api&P=0&h=180"
+                    alt="" width="350px" height="250px"></div>
+            <div class="p-4"><img src="https://tse2.mm.bing.net/th?id=OIP.Dh7pFto7YSJM6dRwII-EGQHaE8&pid=Api&P=0&h=180"
+                    alt="" width="350px" height="250px"></div>
+            <div class="p-4"><img src="https://tse3.mm.bing.net/th?id=OIP.1aTVYBxKDDGwtKkapM8CwgHaFj&pid=Api&P=0&h=180"
+                    alt="" width="350px" height="250px"></div>
+        </div>
+    </div>
+
+
+    <div class="container" id="our-services">
+
+        <div class="text-center m-5">
+            <h1 style="color: rgb(7, 80, 125); font-family: 'pusifico',cursive;">
+                Our Services
+            </h1>
+        </div>
+
+        <div class="d-flex flex-wrap justify-content-center">
+            <div class="card m-2" style="width: 17rem; height: 15rem;">
+                <div class="card-body">
+                    <img style="border-radius: 50%;" src="./mastercheff.image.png" class="m-2" alt="..." width="100px"
+                        height="100px">
+                    <h5 class="card-title">Master Chefs</h5>
+                    <p class="card-text">Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                </div>
+            </div>
+            <div class="card m-2" style="width: 17rem; height: 15rem;">
+                <div class="card-body">
+                    <img style="border-radius: 60%;" src="./Image_Editor (1).png" class="card-img-top" alt="..."
+                        width="100px" height="110px">
+                    <h5 class="card-title">Quality Food</h5>
+                    <p class="card-text">Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                </div>
+            </div>
+            <div class="card m-2" style="width: 17rem; height: 15rem;">
+                <div class="card-body">
+                    <img style="border-radius: 60%;" src="./Image_Editor.png" class="card-img-top" alt="..."
+                        width="50px" height="110px">
+                    <h5 class="card-title">Online Order</h5>
+                    <p class="card-text">Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                </div>
+            </div>
+            <div class="card m-2" style="width: 17rem; height: 15rem;">
+                <div class="card-body">
+                    <img style="border-radius: 60%;" src="./Image_Editor (2).png" class="card-img-top" alt="..."
+                        width="50px" height="110px">
+                    <h5 class="card-title">24/7 Service</h5>
+                    <p class="card-text">Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container" id="menu-price">
+        <div class="text-center m-5">
+            <h1 style="color: rgb(7, 80, 125); font-family: 'pusifico',cursive;">
+                Menu Price
+            </h1>
+            <h2 style="font-size: 2rem;">
+                Most Popular Items
+            </h2>
+        </div>
+        <div class="d-flex justify-content-center mt-4">
+            <img class="menu-img" src="https://themewagon.github.io/restoran/img/menu-1.jpg" alt="">
+            <div class="d-flex flex-column w-75">
+                <h5 class="d-flex justify-content-between border-bottom border-dark m-3 pb-2 ">
+                    <span>
+                        Veg Shawarma
+
+                    </span>
+                    <span style="color: rgb(7, 80, 125); font-size: 2rem;">
+
+                        $50
+                    </span>
+                </h5>
+                <span class="ms-3">
+
+                    Ipsum ipsum clita erat amet dolor justo diam
+                </span>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center mt-4">
+            <img class="menu-img" src="https://themewagon.github.io/restoran/img/menu-2.jpg" alt="">
+            <div class="d-flex flex-column w-75">
+                <h5 class="d-flex justify-content-between border-bottom border-dark m-3 pb-2 ">
+                    <span>
+                        Mutton Chap Biryani
+
+                    </span>
+                    <span style="color: rgb(7, 80, 125); font-size: 2rem;">
+
+                        $550
+                    </span>
+                </h5>
+                <span class="ms-3">
+
+                    Ipsum ipsum clita erat amet dolor justo diam
+                </span>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center mt-4">
+            <img class="menu-img" src="https://themewagon.github.io/restoran/img/menu-3.jpg" alt="">
+            <div class="d-flex flex-column w-75">
+                <h5 class="d-flex justify-content-between border-bottom border-dark m-3 pb-2 ">
+                    <span>
+                        Chicken Pizza
+
+                    </span>
+                    <span style="color: rgb(7, 80, 125); font-size: 2rem;">
+
+                        $200
+                    </span>
+                </h5>
+                <span class="ms-3">
+
+                    Ipsum ipsum clita erat amet dolor justo diam
+                </span>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center mt-4">
+            <img class="menu-img" src="https://themewagon.github.io/restoran/img/menu-4.jpg" alt="">
+            <div class="d-flex flex-column w-75">
+                <h5 class="d-flex justify-content-between border-bottom border-dark m-3 pb-2 ">
+                    <span>
+                        Mutton Pepper
+
+                    </span>
+                    <span style="color: rgb(7, 80, 125); font-size: 2rem;">
+
+                        $400
+                    </span>
+                </h5>
+                <span class="ms-3">
+
+                    Ipsum ipsum clita erat amet dolor justo diam
+                </span>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center mt-4">
+            <img class="menu-img" src="https://themewagon.github.io/restoran/img/menu-5.jpg" alt="">
+            <div class="d-flex flex-column w-75">
+                <h5 class="d-flex justify-content-between border-bottom border-dark m-3 pb-2 ">
+                    <span>
+                        Gurda Pulao
+                    </span>
+                    <span style="color: rgb(7, 80, 125); font-size: 2rem;">
+
+                        $150
+                    </span>
+                </h5>
+                <span class="ms-3">
+
+                    Ipsum ipsum clita erat amet dolor justo diam
+                </span>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center mt-4">
+            <img class="menu-img" src="https://themewagon.github.io/restoran/img/menu-6.jpg" alt="">
+            <div class="d-flex flex-column w-75">
+                <h5 class="d-flex justify-content-between border-bottom border-dark m-3 pb-2 ">
+                    <span>
+                        French Fries
+
+                    </span>
+                    <span style="color: rgb(7, 80, 125); font-size: 2rem;">
+
+                        $250
+                    </span>
+                </h5>
+                <span class="ms-3">
+
+                    Ipsum ipsum clita erat amet dolor justo diam
+                </span>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center mt-4">
+            <img class="menu-img" src="https://themewagon.github.io/restoran/img/menu-7.jpg" alt="">
+            <div class="d-flex flex-column w-75">
+                <h5 class="d-flex justify-content-between border-bottom border-dark m-3 pb-2 ">
+                    <span>
+                        Special pizza
+
+                    </span>
+                    <span style="color: rgb(7, 80, 125); font-size: 2rem;">
+
+                        $220
+                    </span>
+                </h5>
+                <span class="ms-3">
+
+                    Ipsum ipsum clita erat amet dolor justo diam
+                </span>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center mt-4">
+            <img class="menu-img" src="https://themewagon.github.io/restoran/img/menu-8.jpg" alt="">
+            <div class="d-flex flex-column w-75">
+                <h5 class="d-flex justify-content-between border-bottom border-dark m-3 pb-2 ">
+                    <span>
+                        Fish Sizzler
+                    </span>
+                    <span style="color:rgb(7, 80, 125); font-size: 2rem;">
+
+                        $350
+                    </span>
+                </h5>
+                <span class="ms-3">
+
+                    Ipsum ipsum clita erat amet dolor justo diam
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Section with Flex Layout -->
+    <section id="order" class="order-section py-5 text-center">
+        <div class="container">
+            <h1 class="section-title" style="color: rgb(7, 80, 125); font-family: 'pusifico',cursive;">Place an Order
+            </h1>
+            <p class="section-description">Order online for delivery or pickup</p>
+            <div class="flex-container align-items-center">
+                <div class="flex-item" style="border: none; background-color: white;">
+                    <h2>Order your favorite</h2>
+                    <p>Get your favorite dishes conveniently with our easy order, delivery, and pickup options! Choose
+                        from our delicious menu, place your order online, and decide if you’d like it delivered straight
+                        to your door or ready for quick pickup. Our streamlined service ensures your meal arrives fresh
+                        and on time, whether you’re dining at home or grabbing a bite on the go. Enjoy hassle-free
+                        ordering and a delightful dining experience wherever you are!</p>
+                        <a href="#">Learn More</a>
+                </div>
+                <div class="flex-item" style="border: none; background-color: white;">
+                    <img src="https://www.pngarts.com/files/7/Food-Delivery-PNG-Image.png" alt="" height="200px">
+                    <h5>Order for Pickup</h5>
+                    <p>Place your order and pick it up at our restaurant.</p>
+                    <a href="#" id="btnHover" class="btn btn-primary" role="button" aria-label="Order for Pickup">Order
+                        Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Discounts Section with Flex Layout -->
+    <section id="discounts" class="gifts-section py-5 text-center">
+        <div class="container">
+            <h1 class="section-title" style="color: rgb(7, 80, 125); font-family: 'pusifico',cursive;">Discounts
+            </h1>
+            <p class="section-description">Give the gift of a delicious meal or enjoy special offers.</p>
+            <div class="flex-container align-items-center">
+                <div class="flex-item" style="border: none; background-color: white;">
+                    <img src="https://png.pngtree.com/png-vector/20230927/ourmid/pngtree-special-discount-element-promotion-sale-marketing-social-media-modern-minimalism-design-png-image_10169145.png"
+                        alt="" height="200px">
+                    <h5>Special Discounts</h5>
+                    <p>Enjoy exclusive offers and seasonal discounts.</p>
+                    <a href="#" id="btnHover" class="btn btn-primary" role="button" aria-label="View Offers">Learn
+                        More</a>
+                </div>
+                <div class="flex-item" style="border: none; background-color: white;">
+                    <h2>Best Discount</h2>
+                    <p>Enjoy delicious meals with incredible savings! We’re excited to offer exclusive discounts on
+                        select dishes, making it easier than ever to savor your favorites. Whether you’re dining in or
+                        ordering online, check out our latest promotions and special deals designed to bring you great
+                        food at great prices. Don’t miss out—treat yourself to the flavors you love while enjoying
+                        amazing discounts!</p>
+                    <a href="#" >View More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section bg-dark text-white text-center py-4">
+        <p>&copy; 2024 Restaurant Name. All rights reserved.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
